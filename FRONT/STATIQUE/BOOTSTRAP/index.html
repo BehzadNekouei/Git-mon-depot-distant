@@ -25,29 +25,42 @@
  <body>
      <div class="container">
          <header>
-             <div>
-                 <div>
-                     <a href="#"><img src="img/jarditou_logo.jpg" alt="logo"></a>
+             <div class="row">
+                 <div class="col">
+                    <a href="#"><img src="img/jarditou_logo.jpg" alt="logo" height="50" width="150"></a>
                  </div>
-                 <div>
-                     <h1>Tout le jardin</h1>
+                 <div class="col">
+                     <h2 class="text-right pr-5">Tout le jardin</h2>
                  </div>
-             </div>
-             <nav> 
-                 <ul>
-                 <li><a href="index.html" title="Accueil">Accueil</a></li>
-                 <li><a href="tableau.html" title="Tableau">Tableau</a></li>
-                 <li><a href="contact.html" title="Contact">Contact</a></li>
-                 </ul>
-             </nav>
+             </div>             
+             <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+                 <!-- Brand -->
+                  <a class="navbar-brand" href="index.html">Jarditou.com</a>
+                 <!-- Toggler/collapsibe Button -->
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar"> 
+                       <!-- Navbar links -->
+                   <ul class="navbar-nav mr-auto">
+                     
+                     <li class="nav-item active"><a class="nav-link" href="index.html" title="Accueil">Accueil</a></li>  
+                     <li class="nav-item "><a class="nav-link" href="tableau.html" title="Tableau">Tableau</a></li>
+                     <li class="nav-item"><a class="nav-link" href="contact.html" title="Contact">Contact</a></li>
+                   </ul>
+                       <!-- search bar -->
+                   <form class="form-inline my-lg-0" action="/action_page.php">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Votre promotion">
+                    <button class="btn btn-outline-success" type="submit">rechercher</button>
+                 </form>
+                  </div>
+             </nav>           
              <div>
-                <img src="img/promotion.jpg" alt="promotion">
+                <img class="img-fluid"  src="img/promotion.jpg" alt="promotion">
              </div>
          </header>
-         <div class="row"> 
+         <div class="row m-0 shadow-lg"> 
              <section class="col-lg-8">
-                 <h2>Accueil</h2>
-                 <hr>
                  <article>
                      <h2>L'entreprise</h2>
                      <p>Notre entreprise familiale met tout son savoire-faire à votre disposition dans le domaine du jardin et du paysagisme.</p>
@@ -65,15 +78,15 @@
                      <p>Vous pouvez bien sur contacter pour de plus amples informations ou pour une demande d'intervantion Vous souhaitez un devis? Nous vous le réalisons.</p>
                  </article>
              </section>
-             <aside class="col-lg-4 bg-secondary" bg->
-                <p>[CLONNE DROITE]</p>
+             <aside class="col-lg-4 bg-warning">
+                <h3 class="text-center pt-3">[Colonne de Droite]</h3>
              </aside>
          </div>
-         <footer> 
-             <ul>
-                 <li><a href="#" title="Mention légales">Mention légales</a></li>
-                 <li><a href="#" title="Horaires">Horaires</a></li>
-                 <li><a href="#" title="Plan du site">Plan du site</a></li>
+         <footer class="navbar navbar-expand-lg navbar-dark bg-dark mt-3 rounded"> 
+             <ul class="navbar-nav">
+                 <li class="nav-item"><a class="nav-link" href="#" title="Mention légales">Mention légales</a></li>
+                 <li class="nav-item"><a class="nav-link" href="#" title="Horaires">Horaires</a></li>
+                 <li class="nav-item"><a class="nav-link" href="#" title="Plan du site">Plan du site</a></li>
              </ul>
          </footer>
      </div>
