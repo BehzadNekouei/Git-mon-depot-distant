@@ -1,7 +1,7 @@
 
 var nomFiltre = new RegExp (/^[A-Za-z]+$/);
 var prenomFiltre = new RegExp (/^[A-Za-z]+$/);
-var adresseFiltre = new RegExp (/^[A-Za-z]+$/);
+var adresseFiltre = new RegExp (/^[0-9A-Za-z\s]+$/);
 var villeFiltre = new RegExp (/^[A-Za-z]+$/);
 var codeFiltre = new RegExp (/^[0-9]*$/);
 
