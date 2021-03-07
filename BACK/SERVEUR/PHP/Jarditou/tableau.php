@@ -1,0 +1,104 @@
+<?php 
+    include("header.php");
+?>
+      <div class="table-responsive-lg">
+        <section>
+          <table class="table table-bordered table-hover">
+            <thead class="thead-light">
+              <tr>
+                <th>Photo</th>
+                <th>ID</th>
+                <th>Catégorie</th>
+                <th>Libellé</th>
+                <th>Prix</th>
+                <th>Couleur</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-warning">
+                <td>
+                  <img
+                    src="img/7.jpg"
+                    alt=""
+                    title=""
+                    height="100"
+                    width="100"
+                  />
+                </td>
+                <td>7</td>
+                <td>Barbecues</td>
+                <td>Aramis</td>
+                <td>110.00€</td>
+                <td>Brun</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="img/8.jpg"
+                    alt=""
+                    title=""
+                    height="100"
+                    width="100"
+                  />
+                </td>
+                <td>8</td>
+                <td>Barbecues</td>
+                <td>Athos</td>
+                <td>249.99€</td>
+                <td>Noir</td>
+              </tr>
+              <tr class="table-warning">
+                <td>
+                  <img
+                    src="img/11.jpg"
+                    alt=""
+                    title=""
+                    height="100"
+                    width="100"
+                  />
+                </td>
+                <td>11</td>
+                <td>Barbecues</td>
+                <td>Clatronic</td>
+                <td>135.90€</td>
+                <td>Chrome</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="img/12.jpg"
+                    alt=""
+                    title=""
+                    height="100"
+                    width="100"
+                  />
+                </td>
+                <td>12</td>
+                <td>Barbecues</td>
+                <td>Camping</td>
+                <td>88.00€</td>
+                <td>Noir</td>
+              </tr>
+              <tr class="table-warning">
+                <td>
+                  <img
+                    src="img/13.jpg"
+                    alt=""
+                    title=""
+                    height="100"
+                    width="100"
+                  />
+                </td>
+                <td>13</td>
+                <td>Brouette</td>
+                <td>Green</td>
+                <td>49.00€</td>
+                <td>Verte</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+      <?php 
+    include("footer.php");
+?>
