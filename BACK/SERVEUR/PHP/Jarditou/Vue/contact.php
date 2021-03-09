@@ -1,11 +1,14 @@
-<?php 
+
+     <!-- import header.php -->
+    <?php 
+    $title='Contact';
     include("header.php");
 ?>
       <div>
         <section>
           <p>* Ces zones sont obligatoires</p>
 
-          <form name="contact" action="http://bienvu.net/script.php" method="post" onsubmit="return validateForm(this);" >
+          <form name="contact" action="contact_script.php" method="post">
             <fieldset>
               <strong><legend>Vos coordonnées</legend></strong>
               <label for="nom">Votre nom* :</label>
@@ -28,11 +31,11 @@
                 
               /><br />
               <p id="prenommsg"></p>
-              <label for="gender">Sexe*:</label>
+              <label>Sexe*:</label>
                <br />
-              <input type="radio" id="feminin" name="gender" value="male" required/>feminin
-              <input type="radio" id="masculin" name="gender" value="female" />masculin
-              <input type="radio" id="neutre" name="gender" value="neutre" />neutre
+              <input type="radio" id="feminin" name="gender" value="male" /> <label for="feminin">feminin</label>
+              <input type="radio" id="masculin" name="gender" value="female" /> <label for="masculin">masculin</label>
+              <input type="radio" id="neutre" name="gender" value="neutre" /> <label for="neutre">neutre</label>
               <br />
 
               <label for="ddn">Date de naissance*:</label>
@@ -67,7 +70,7 @@
               <label for="codeP">Code Postal* :</label>
               <input
                 class="form-control"
-                type="text"
+                type="number"
                 name="codeP"
                 id="codeP"
                 maxlength="5"
@@ -81,13 +84,13 @@
                 name="email"
                 id="email"
                 placeholder="dave.loper@afpa.fr"
-                required
+                
               /><br />
             </fieldset>
             <fieldset>
               <strong><legend>Votre demande</legend></strong>
               <label for="sujet">Sujet* :</label>
-              <select name="sujet" class="form-control" id="sujet" required>
+              <select name="sujet" class="form-control" id="sujet" >
                 <option selected value="">
                   Veuillez selectionner un sujet
                 </option>
@@ -103,26 +106,27 @@
                 class="form-control"
                 id="question"
                 name="question"
-                required
+                
               ></textarea>
             </fieldset>
             <br />
-            <input type="checkbox" name="jaccept" value="jaccept" required/> J'accepte
+            <input type="checkbox" name="jaccept" value="true" /> J'accepte
             le traitement informatique de ce formulaire<br /><br />
             <input
               class="btn btn-dark border border-primary"
               type="submit"
               value="Envoyer"
-             
+              name="submit"
             />
             <input
               class="btn btn-dark border border-primary"
               type="reset"
               value="Annuler"
+              name="reset"
             />
           </form>
         </section>
       </div>
       <?php 
     include("footer.php");
-?>
+    ?>

@@ -10,22 +10,13 @@
 
     <meta name="discription" content="Le site de l'entreprise Jarditou" />
 
-    <title>la page d'accueil du site de l'entreprise Jarditou</title>
+    <title>Jarditou <?php echo $title ?></title>
 
     <!-- Latest compiled and minified CSS -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -34,7 +25,7 @@
           <div class="col d-none d-lg-block">
             <a href="#"
               ><img
-                src="img/jarditou_logo.jpg"
+                src="<?php $_SERVER['DOCUMENT_ROOT']?>/Contenu/img/jarditou_logo.jpg"
                 alt="logo"
                 height="50"
                 width="150"
@@ -46,7 +37,7 @@
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <!-- Brand -->
-          <a class="navbar-brand" href="index.php">Jarditou.com</a>
+          <a class="navbar-brand" href="<?php $_SERVER['DOCUMENT_ROOT']?>/index.php ">Jarditou.com</a>
           <!-- Toggler/collapsibe Button -->
           <button
             class="navbar-toggler"
@@ -60,23 +51,23 @@
             <!-- Navbar links -->
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.php" title="Accueil"
+                <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT']?>/index.php" title="Accueil"
                   >Accueil</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="tableau.php" title="Tableau"
+                <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT']?>/Vue/tableau.php" title="Tableau"
                   >Tableau</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.php" title="Contact"
+                <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT']?>/Vue/contact.php" title="Contact"
                   >Contact</a
                 >
               </li>
             </ul>
             <!-- search bar -->
-            <form class="form-inline my-lg-0" action="/action_page.php">
+            <form class="form-inline my-lg-0" action="">
               <input
                 class="form-control mr-sm-2"
                 type="text"
@@ -89,6 +80,6 @@
           </div>
         </nav>
         <div>
-          <img class="img-fluid" src="img/promotion.jpg" alt="promotion" />
+          <img class="img-fluid" src="<?php $_SERVER['DOCUMENT_ROOT']?>/Contenu/img/promotion.jpg" alt="promotion" />
         </div>
       </header>

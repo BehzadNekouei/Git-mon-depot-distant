@@ -1,6 +1,7 @@
-<?php 
-    include("header.php");
-?>
+    <?php 
+    $title='Accueil';
+    include("vue/header.php");
+    ?>
       <div class="row m-0 shadow-lg">
         <section class="col-lg-8">
           <article>
@@ -45,6 +46,6 @@
         </aside>
       </div>
       <?php 
-    include("footer.php");
+      include("vue/footer.php");
 ?>
 
