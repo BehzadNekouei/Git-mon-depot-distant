@@ -39,12 +39,13 @@
               <td><?php echo $row['pro_couleur'] ?></td>
               <td><?php echo $row['pro_d_ajout'] ?></td>
               <td><?php echo $row['pro_d_modif'] ?></td>
-              <td><?php echo $row['pro_bloque'] ?></td>
+              <td><?php if($row['pro_bloque']==1) {echo '<span class="bg-danger rounded">BLOQUE</span>'; }?></td>
              </tr>
 
             <?php } ?>
             </tbody>
           </table>
+          <a href="add_product.php"><button type="button" class="btn btn-primary">Ajouter</button></a>
       </div>
       <?php 
     include("footer.php");

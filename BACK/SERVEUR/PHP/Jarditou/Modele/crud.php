@@ -15,7 +15,7 @@ class crud{
     $prix,
     $stock,
     $couleur,
-    $imgProduit,
+    $imgExtension,
     $ajout,
     $modif,
     $bloque
@@ -60,13 +60,13 @@ class crud{
             $add->bindparam(':pro_prix',$prix);
             $add->bindparam(':pro_stock',$stock);
             $add->bindparam(':pro_couleur',$couleur);
-            $add->bindparam(':pro_photo',$imgProduit);
+            $add->bindparam(':pro_photo',$imgExtension);
             $add->bindparam(':pro_d_ajout',$ajout);
             $add->bindparam(':pro_d_modif',$modif);
             $add->bindparam(':pro_bloque',$bloque);
 
             $add->execute();
-            return true;
+            return $this->db->lastInsertId();
         } 
         catch (PDOException $e) {
             echo $e->getMessage();
