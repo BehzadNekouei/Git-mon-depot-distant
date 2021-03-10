@@ -33,7 +33,7 @@
               /><br />
               <label for="Categorie">Catégorie :</label>
               <select name="categorie" class="form-control" id="Categorie" disabled>
-                <option value="" ><?php echo $result['pro_cat_id'];?></option>
+                <option value="" ><?php echo $result['cat_nom'];?></option>
               </select><br />
               <label for="Libelle">Libellé :</label>
               <input
@@ -107,18 +107,9 @@
         </section>
       </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+      <a href="tableau.php"><button type="button" class="btn btn-secondary mr-3">Retour</button></a>
+      <a href="update_form.php"><button type="button" class="btn btn-warning mr-3">Modifier</button></a>
+      <a href="delete_form.php"><button type="button" class="btn btn-danger">Supprimer</button></a>
 <?php 
   include("footer.php");
 ?>

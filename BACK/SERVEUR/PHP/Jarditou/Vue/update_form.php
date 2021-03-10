@@ -1,4 +1,12 @@
-      <!-- import header.php -->
-    <?php 
-    include("header.php");
-    ?>
+ <!-- import header.php -->
+ <?php 
+  include("header.php");
+?>
+
+
+
+
+
+<?php 
+  include("footer.php");
+?>

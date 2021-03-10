@@ -87,7 +87,7 @@ class crud{
     //function to get all records of one product  
     public function getProductDetails($pro_id){
 
-        $sql = "SELECT * FROM `produits` WHERE `pro_id` = :pro_id";
+        $sql = "SELECT * FROM `produits`,`categories`  WHERE `produits`.`pro_cat_id`=`categories`.`cat_id` AND `pro_id` = :pro_id";
         $detail=$this->db->prepare($sql);
         $detail->bindparam(':pro_id',$pro_id);
         $detail->execute();
