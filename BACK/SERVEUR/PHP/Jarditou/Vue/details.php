@@ -108,8 +108,8 @@
       </div>
 
       <a href="tableau.php"><button type="button" class="btn btn-secondary mr-3">Retour</button></a>
-      <a href="update_form.php"><button type="button" class="btn btn-warning mr-3">Modifier</button></a>
-      <a href="delete_form.php"><button type="button" class="btn btn-danger">Supprimer</button></a>
+      <a href="update_form.php?pro_id=<?php echo $result['pro_id']; ?>"><button type="button" class="btn btn-warning mr-3">Modifier</button></a>
+      <a href="delete_form.php?pro_id=<?php echo $result['pro_id']; ?>"><button type="button" class="btn btn-danger">Supprimer</button></a>
 <?php 
   include("footer.php");
 ?>
