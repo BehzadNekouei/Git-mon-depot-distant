@@ -1,9 +1,11 @@
-
-      <!-- import header.php -->
-      <?php
+<!-- import header.php -->
+<?php
       $title='ajouter un produit';
-       include('header.php')
-      ?>
+      include('header.php');
+      require_once("../Modele/config.php");  // Connexion base
+      $result = $pdo->query("SELECT * FROM categories ORDER BY cat_id"); // Requête pour avoir les cat_id
+      $categories = $result->fetchAll(PDO::FETCH_OBJ);
+?>
       <div>
         <section>
           <br>
@@ -18,9 +20,15 @@
               /><br />
               <label for="Categorie">Catégorie :</label>
               <select name="categorie" class="form-control" id="Categorie" >
-                <option>
-                 
-                </option>
+                <option value=""></option>
+                <?php
+    foreach($categories as $c)
+    {
+        ?>
+        <option value = "<?= $c->cat_id?>"> <?=$c->cat_id."-".$c->cat_nom?></option>
+        <?php
+    }
+    ?>
                 </select
               ><br />
               <label for="Libelle">Libellé :</label>

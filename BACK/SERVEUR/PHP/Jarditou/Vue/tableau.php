@@ -9,9 +9,8 @@
   $result= $crud->getProductList();
 
 ?>
-      <div class="table-responsive-lg">
-        <section>
-          <table class="table table-bordered table-hover">
+      <div class="row mx-auto table-responsive">
+          <table class=" table table-bordered table-hover">
             <thead class="thead-light">
               <tr>
                 <th>Photos</th>
@@ -31,7 +30,7 @@
             while($row = $result->fetch(PDO::FETCH_ASSOC)){
             ?>
              <tr >
-              <td class="table-warning" ><img height="100" width="100" src="<?php $_SERVER['DOCUMENT_ROOT']?>/Contenu/img/<?php echo $row['pro_id'] ?>.<?php echo $row['pro_photo'] ?>" alt=""></td>
+              <td class="table-warning" ><img width="100" src="<?php $_SERVER['DOCUMENT_ROOT']?>/Contenu/img/<?php echo $row['pro_id'] ?>.<?php echo $row['pro_photo'] ?>" alt=""></td>
               <td><?php echo $row['pro_id'] ?></td>
               <td><?php echo $row['pro_ref'] ?></td>
               <td class="table-warning"><a href="detail.php?pro_id=<?php echo $row['pro_id'] ?>" title="<?php echo $row['pro_libelle'] ?>"><?php echo $row['pro_libelle'] ?></a></td>
@@ -46,7 +45,6 @@
             <?php } ?>
             </tbody>
           </table>
-        </section>
       </div>
       <?php 
     include("footer.php");

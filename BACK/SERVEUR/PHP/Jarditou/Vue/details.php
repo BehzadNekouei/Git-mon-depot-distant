@@ -5,20 +5,23 @@
   require_once("../Modele/config.php");  // Connexion base
 
   require_once("../Modele/crud.php"); // Call fonctions in crud
-
+  $pro_id = $_GET["pro_id"];
   $result= $crud->getProductList();
-
 ?>
-      
-            <?php
-            while($row = $result->fetch(PDO::FETCH_ASSOC)){
-            ?>
-             <?php echo $row['pro_id'] ?>
-            <?php } ?>
-            </tbody>
-          </table>
-        </section>
-      </div>
-      <?php 
-    include("footer.php");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php 
+  include("footer.php");
 ?>

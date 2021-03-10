@@ -8,17 +8,22 @@ class crud{
     
     //function to insert a new record in the product table    
     public function addProduct(
+    $categorie, 
     $reference,
-    $categorie,
     $libelle,
     $description,
     $prix,
     $stock,
     $couleur,
     $imgProduit,
+    $ajout,
+    $modif,
     $bloque
-    ){
-        try {
+    )
+    {
+
+        try
+        {
 
             $sql = "INSERT INTO `produits`( 
                 `pro_cat_id`, 
@@ -45,25 +50,39 @@ class crud{
                 :pro_d_ajout, 
                 :pro_d_modif, 
                 :pro_bloque
-                 );
+                 )";
             $add= $this->db->prepare($sql);
 
-            $add->bindparam(
+            $add->bindparam(':pro_cat_id',$categorie);
+            $add->bindparam(':pro_ref',$reference);
+            $add->bindparam(':pro_libelle',$libelle);
+            $add->bindparam(':pro_description',$description);
+            $add->bindparam(':pro_prix',$prix);
+            $add->bindparam(':pro_stock',$stock);
+            $add->bindparam(':pro_couleur',$couleur);
+            $add->bindparam(':pro_photo',$imgProduit);
+            $add->bindparam(':pro_d_ajout',$ajout);
+            $add->bindparam(':pro_d_modif',$modif);
+            $add->bindparam(':pro_bloque',$bloque);
 
-        } catch () {
-            
+            $add->execute();
+            return true;
+        } 
+        catch (PDOException $e) {
+            echo $e->getMessage();
+            return false;
         }
 
     }
 
-    //function to select and return all records in the product table 
+    
     public function getProductList(){
 
      $sql = "SELECT * FROM `produits`";
      $result=$this->db->query($sql);
      return $result;
     }
-
+        
 }
 ?>
 

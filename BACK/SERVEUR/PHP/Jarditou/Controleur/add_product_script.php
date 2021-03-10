@@ -1,4 +1,15 @@
 <?php
+  $title='add product';
+  include("../Vue/header.php");//import header.php
+    
+  require_once("../Modele/config.php");  // Connexion base
+
+  require_once("../Modele/crud.php"); // Call fonctions in crud
+  
+    
+
+        if(isset($_POST["submit"])){
+
         $reference = $_POST['reference'];
         $categorie = $_POST['categorie'];
         $libelle = $_POST['libelle'];
@@ -7,10 +18,34 @@
         $stock = $_POST['stock'];
         $couleur = $_POST['couleur'];
         $imgProduit = $_POST['imgProduit'];
+        $ajout=date("Y-m-d");
+        $modif=null;
         $bloque = $_POST['bloque'];
-        $product_id;
+        
+        
+        $result= $crud->addProduct($categorie, 
+        $reference,
+        $libelle,
+        $description,
+        $prix,
+        $stock,
+        $couleur,
+        $imgProduit,
+        $ajout,
+        $modif,
+        $bloque);
+
+        if($result){
+            echo "<p class='text-success'>Adding product was successful !</p>";
+
+        }else{
+            echo "<p class='text-danger'>Adding product was unsuccessful !</p>";
+        }
 
 
+
+
+        
 
                 if($_FILES['imgProduit']['error']==0) {
                                   
@@ -49,7 +84,7 @@
                             }
                             return $message;
                         }
-
+                    }
                 
     
 

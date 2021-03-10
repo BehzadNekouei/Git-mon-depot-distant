@@ -79,7 +79,7 @@
             </form>
           </div>
         </nav>
-        <div>
-          <img class="img-fluid" src="<?php $_SERVER['DOCUMENT_ROOT']?>/Contenu/img/promotion.jpg" alt="promotion" />
-        </div>
+        
+  <img class="img-fluid" width="1319" src="<?php $_SERVER['DOCUMENT_ROOT']?>/Contenu/img/promotion.jpg" alt="promotion" />
+        
       </header>
