@@ -8,7 +8,7 @@
         <section>
           <p>* Ces zones sont obligatoires</p>
 
-          <form name="contact" action="contact_script.php" method="post">
+          <form name="contact" action="../Controleur/contact_script.php" method="post">
             <fieldset>
               <strong><legend>Vos coordonnées</legend></strong>
               <label for="nom">Votre nom* :</label>

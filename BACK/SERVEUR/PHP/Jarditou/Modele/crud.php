@@ -69,19 +69,33 @@ class crud{
             return $this->db->lastInsertId();
         } 
         catch (PDOException $e) {
-            echo $e->getMessage();
+            echo "<br><br><h3 class='text-danger'>There is an error! Please check your input informations. </h3><br><br>";
+            // echo $e->getMessage();
             return false;
         }
 
     }
 
-    
+    //function to get all records in the product table    
     public function getProductList(){
 
      $sql = "SELECT * FROM `produits`";
      $result=$this->db->query($sql);
      return $result;
     }
+
+    //function to get all records of one product  
+    public function getProductDetails($pro_id){
+
+        $sql = "SELECT * FROM `produits` WHERE `pro_id` = :pro_id";
+        $detail=$this->db->prepare($sql);
+        $detail->bindparam(':pro_id',$pro_id);
+        $detail->execute();
+        $result = $detail->fetch();
+        return $result;
+       }
+
+
         
 }
 ?>

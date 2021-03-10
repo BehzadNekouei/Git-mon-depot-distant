@@ -38,10 +38,12 @@
       
         if($product_id != null){
             echo "<br><br><h3 class='text-success'>Adding product was successful !</h3><br><br>";
+            
+            header("Location:../Vue/tableau.php");//rediretion to page tableau
       
         }else{
             echo "<br><br><h3 class='text-danger'>Adding product was unsuccessful !</h3><br><br>";
-
+            echo '<a href="../Vue/add_product.php"><button type="button" class="btn btn-secondary">Retour</button></a>';
         } 
 
 
@@ -85,4 +87,6 @@
              }
         
     }
+     include('../Vue/footer.php');
  ?>
+

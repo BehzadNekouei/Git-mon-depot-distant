@@ -33,7 +33,7 @@
               <td class="table-warning" ><img width="100" src="<?php $_SERVER['DOCUMENT_ROOT']?>/Contenu/img/<?php echo $row['pro_id'] ?>.<?php echo $row['pro_photo'] ?>" alt=""></td>
               <td><?php echo $row['pro_id'] ?></td>
               <td><?php echo $row['pro_ref'] ?></td>
-              <td class="table-warning"><a href="detail.php?pro_id=<?php echo $row['pro_id'] ?>" title="<?php echo $row['pro_libelle'] ?>"><?php echo $row['pro_libelle'] ?></a></td>
+              <td class="table-warning"><a href="details.php?pro_id=<?php echo $row['pro_id'] ?>" title="<?php echo $row['pro_libelle'] ?>"><?php echo $row['pro_libelle'] ?></a></td>
               <td><?php echo $row['pro_prix'] ?></td>
               <td><?php echo $row['pro_stock'] ?></td>
               <td><?php echo $row['pro_couleur'] ?></td>

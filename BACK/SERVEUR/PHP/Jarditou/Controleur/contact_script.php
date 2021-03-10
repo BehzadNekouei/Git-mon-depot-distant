@@ -1,5 +1,5 @@
 <?php
-include('header.php');
+include('../Vue/header.php');
 echo '<br><br>';
 // On verifie si le button est verifié;
 if(isset($_POST["submit"])){
@@ -12,7 +12,7 @@ if(isset($_POST["submit"])){
         echo '</span>';
         echo '<a 
         class="btn btn-info btn-dark border border-primary" 
-        href="../contact.php"
+        href="../Vue/contact.php"
         >Return sur la formulaire</a>';
     } else
     // On verifie si le champ est bien renseigné;
@@ -24,7 +24,7 @@ if(isset($_POST["submit"])){
         echo '</span>';
         echo '<a 
         class="btn btn-info btn-dark border border-primary" 
-        href="../contact.php"
+        href="../Vue/contact.php"
         >Return sur la formulaire</a>';
     }  else
     // On verifie si le champ est bien renseigné;
@@ -36,7 +36,7 @@ if(isset($_POST["submit"])){
         echo '</span>';
         echo '<a 
         class="btn btn-info btn-dark border border-primary" 
-        href="../contact.php"
+        href="../Vue/contact.php"
         >Return sur la formulaire</a>';
     }  else
     // On verifie si le champ est bien renseigné;
@@ -48,7 +48,7 @@ if(isset($_POST["submit"])){
         echo '</span>';
         echo '<a 
         class="btn btn-info btn-dark border border-primary" 
-        href="../contact.php"
+        href="../Vue/contact.php"
         >Return sur la formulaire</a>';
     }  else
     // On verifie si le champ est bien renseigné;
@@ -60,7 +60,7 @@ if(isset($_POST["submit"])){
         echo '</span>';
         echo '<a 
         class="btn btn-info btn-dark border border-primary" 
-        href="../contact.php"
+        href="../Vue/contact.php"
         >Return sur la formulaire</a>';
     }  else
     // On verifie si le champ est bien renseigné;
@@ -72,7 +72,7 @@ if(isset($_POST["submit"])){
         echo '</span>';
         echo '<a 
         class="btn btn-info btn-dark border border-primary" 
-        href="../contact.php"
+        href="../Vue/contact.php"
         >Return sur la formulaire</a>';
     }  else
     // On verifie si le champ est bien renseigné;
@@ -84,7 +84,7 @@ if(isset($_POST["submit"])){
         echo '</span>';
         echo '<a 
         class="btn btn-info btn-dark border border-primary" 
-        href="../contact.php"
+        href="../Vue/contact.php"
         >Return sur la formulaire</a>';
     }  else
     // On verifie si le champ est bien renseigné;
@@ -96,7 +96,7 @@ if(isset($_POST["submit"])){
         echo '</span>';
         echo '<a 
         class="btn btn-info btn-dark border border-primary" 
-        href="../contact.php"
+        href="../Vue/contact.php"
         >Return sur la formulaire</a>';
     }  else
     // On verifie si le champ est bien renseigné;
@@ -108,7 +108,7 @@ if(isset($_POST["submit"])){
         echo '</span>';
         echo '<a 
         class="btn btn-info btn-dark border border-primary" 
-        href="../contact.php"
+        href="../Vue/contact.php"
         >Return sur la formulaire</a>';
     }  else
     // On verifie si le champ est bien renseigné;
@@ -120,7 +120,7 @@ if(isset($_POST["submit"])){
         echo '</span>';
         echo '<a 
         class="btn btn-info btn-dark border border-primary" 
-        href="../contact.php"
+        href="../Vue/contact.php"
         >Return sur la formulaire</a>';
     }  else
     // On verifie si le champ est bien renseigné;
@@ -132,7 +132,7 @@ if(isset($_POST["submit"])){
         echo '</span>';
         echo '<a 
         class="btn btn-info btn-dark border border-primary" 
-        href="../contact.php"
+        href="../Vue/contact.php"
         >Return sur la formulaire</a>';
     }  
      // si tous les champ sont bien renseigné;
@@ -198,5 +198,5 @@ if(isset($_POST["submit"])){
     echo "Error";
     echo '</span>';
 }
-include('footer.php');
+include('../Vue/footer.php');
 ?>
