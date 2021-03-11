@@ -1,8 +1,8 @@
 
-     <!-- import header.php -->
-    <?php 
-    $title='Contact';
-    include("header.php");
+<!-- import header.php -->
+<?php 
+  $title='Contact';
+  include("header.php");
 ?>
       <div>
         <section>
@@ -13,7 +13,7 @@
               <strong><legend>Vos coordonnées</legend></strong>
               <label for="nom">Votre nom* :</label>
               <input
-                class="form-control"
+                class="form-control <?php echo $nameErr;?>"
                 type="text"
                 name="nom"
                 id="nom"
@@ -127,6 +127,6 @@
           </form>
         </section>
       </div>
-      <?php 
-    include("footer.php");
-    ?>
+<?php 
+  include("footer.php");
+?>

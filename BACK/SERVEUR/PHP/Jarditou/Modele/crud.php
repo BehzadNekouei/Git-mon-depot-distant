@@ -79,9 +79,16 @@ class crud{
     //function to get all records in the product table    
     public function getProductList(){
 
-     $sql = "SELECT * FROM `produits`";
-     $result=$this->db->query($sql);
-     return $result;
+        try {
+            $sql = "SELECT * FROM `produits`";
+            $result=$this->db->query($sql);
+            return $result;
+        } catch (PDOException $e) {
+            echo "<br><br><h3 class='text-danger'>There is an error! </h3><br><br>";
+            // echo $e->getMessage();
+        }
+
+
     }
 
     //function to get all records of one product  
@@ -148,7 +155,7 @@ class crud{
            }
 
 
-    //function to get all records of one product  
+    //function to delete one product by id
     public function deleteProduct($pro_id){
 
         try {

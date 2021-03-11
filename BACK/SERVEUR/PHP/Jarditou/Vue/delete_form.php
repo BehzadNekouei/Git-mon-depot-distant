@@ -1,7 +1,7 @@
 
  <!-- import header.php -->
 <?php 
-  $title='Product details';
+  $title='Delete form';
   include("header.php");
   require_once("../Modele/config.php");  // Connexion base
   require_once("../Modele/crud.php"); // Call functions in crud

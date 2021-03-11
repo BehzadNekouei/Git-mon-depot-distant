@@ -1,6 +1,6 @@
  <!-- import header.php -->
  <?php 
-  $title='Product details';
+  $title='Delete Product';
   include("../Vue/header.php");
   require_once("../Modele/config.php");  // Connexion base
   require_once("../Modele/crud.php"); // Call functions in crud
@@ -10,7 +10,7 @@
 
       $pro_id = $_POST['productId'];
       $result= $crud->deleteProduct($pro_id);
-      
+
       // redirect to page tableau
       if($result){
         echo "<br><br><h3 class='text-success'> product  deleted !</h3><br><br>";
