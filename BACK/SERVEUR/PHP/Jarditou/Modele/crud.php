@@ -52,7 +52,7 @@ class crud{
                 :pro_bloque
                  )";
             $add= $this->db->prepare($sql);
-
+            //bind all placeholders to the actual values
             $add->bindparam(':pro_cat_id',$categorie);
             $add->bindparam(':pro_ref',$reference);
             $add->bindparam(':pro_libelle',$libelle);
@@ -96,7 +96,57 @@ class crud{
        }
 
 
-        
+        //function to change all records of one product  
+        public function changeProductDetails(
+        $productId,
+        $reference,
+        $categorie, 
+        $libelle,
+        $description,
+        $prix,
+        $stock,
+        $couleur,
+        $bloque,
+        $modif
+        ){
+            try {
+                $sql = "UPDATE `produits`
+                SET 
+               `pro_cat_id`=:pro_cat_id,
+               `pro_ref`=:pro_ref,
+               `pro_libelle`=:pro_libelle,
+               `pro_description`=:pro_description,
+               `pro_prix`=:pro_prix,
+               `pro_stock`=:pro_stock,
+               `pro_couleur`=:pro_couleur,
+               `pro_d_modif`=:pro_d_modif,
+               `pro_bloque`=:pro_bloque  
+               WHERE `pro_id` = :pro_id";
+               //bind all placeholders to the actual values
+               $detail=$this->db->prepare($sql);
+               $detail->bindparam(':pro_id',$productId);
+               $detail->bindparam(':pro_ref',$reference);
+               $detail->bindparam(':pro_cat_id',$categorie);
+               $detail->bindparam(':pro_libelle',$libelle);
+               $detail->bindparam(':pro_description', $description);
+               $detail->bindparam(':pro_prix', $prix);
+               $detail->bindparam(':pro_stock',$stock);
+               $detail->bindparam(':pro_couleur',$couleur);
+               $detail->bindparam(':pro_bloque',$bloque);
+               $detail->bindparam(':pro_d_modif',$modif);
+   
+                // execute detail statement
+                 $detail->execute();
+                 return true;
+            } catch (PDOException $e) {
+                echo "<br><br><h3 class='text-danger'>There is an error! Please check your input informations. </h3><br><br>";
+                //  echo $e->getMessage();
+                 return false;
+            }
+
+
+           }
+   
 }
 ?>
 

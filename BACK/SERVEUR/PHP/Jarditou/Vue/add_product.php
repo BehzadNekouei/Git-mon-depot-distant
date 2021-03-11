@@ -25,7 +25,7 @@
     foreach($categories as $c)
     {
         ?>
-        <option value = "<?= $c->cat_id?>"> <?=$c->cat_id."-".$c->cat_nom?></option>
+        <option value = "<?php echo $c->cat_id?>"> <?php echo $c->cat_nom?></option>
         <?php
     }
     ?>
@@ -86,12 +86,7 @@
               <input type="radio" id="non" name="bloque" value="0" /> <label for="non"> Non </label>
               
               <br />
-            <input
-              class="btn btn-secondary"
-              type="reset"
-              value="Annuler"
-              name="reset"
-            />
+              <a href="tableau.php"><button type="button" class="btn btn-secondary mr-3">Retour</button></a>
             <input
               class="btn btn-primary"
               type="submit"

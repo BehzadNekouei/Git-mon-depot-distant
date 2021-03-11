@@ -49,9 +49,8 @@
                 class="form-control"
                 id="description"
                 name="description"
-                placeholder="<?php echo $result['pro_description']; ?>"
                 readonly
-              ></textarea><br />
+              ><?php echo $result['pro_description']; ?></textarea><br />
               <label for="prix">Prix :</label>
               <input
                 class="form-control"

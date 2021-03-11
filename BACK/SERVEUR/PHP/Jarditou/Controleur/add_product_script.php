@@ -22,7 +22,7 @@
         $ajout=date("Y-m-d");
         $modif=NULL;
         $bloque = $_POST['bloque'];
-        //$product_id=$_POST['pro_id'];
+        
 
         $product_id = $crud->addProduct($categorie, 
         $reference,
