@@ -146,6 +146,26 @@ class crud{
 
 
            }
+
+
+    //function to get all records of one product  
+    public function deleteProduct($pro_id){
+
+        try {
+            $sql="DELETE FROM `produits` WHERE `pro_id` = :pro_id";
+            $delete=$this->db->prepare($sql);
+            $delete->bindparam(':pro_id',$pro_id);
+            $delete->execute();
+            return true;
+        } catch (PDOException $e) {
+            echo "<br><br><h3 class='text-danger'>There is an error! Please check your input informations. </h3><br><br>";
+                //  echo $e->getMessage();
+                 return false;
+        }
+
+       
+       }
+
    
 }
 ?>

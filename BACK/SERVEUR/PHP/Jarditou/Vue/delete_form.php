@@ -27,12 +27,16 @@
     <br><br>
     <div class="d-flex justify-content-center">
     <a href="details.php?pro_id=<?php echo $result['pro_id']; ?>"><button type="button" class="btn btn-success mr-3">Annuler</button></a>
+
+    <form action="../Controleur/delete_script.php" method="POST">
+    <input type="hidden" name="productId" value="<?php echo $result['pro_id']; ?>">
     <input
       class="btn btn-danger"
       type="submit"
-      value="Supprimmer"
+      value="Supprimer"
       name="submit"
     />
+    </form>
     </div>
   </section>            
 
