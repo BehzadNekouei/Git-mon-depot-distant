@@ -13,12 +13,12 @@
               <strong><legend>Vos coordonnées</legend></strong>
               <label for="nom">Votre nom* :</label>
               <input
-                class="form-control <?php echo $nameErr;?>"
+                class="form-control"
                 type="text"
                 name="nom"
                 id="nom"
                 placeholder="Veuilez saisir votrer nom"
-              
+                
               /><br />
               <p id="nommsg"></p>
               <label for="prenom">Votre prénom* :</label>
@@ -127,6 +127,8 @@
           </form>
         </section>
       </div>
+      <!-- validation coté client -->
+      <!-- <script src="../Controleur/js/contact_validation.js"></script> -->
 <?php 
   include("footer.php");
 ?>

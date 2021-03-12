@@ -10,11 +10,14 @@ if(isset($_POST["submit"])){
         echo "Le nom doit être renseigné!";
         echo "<br><br>";
         echo '</span>';
-        echo '<a 
-        class="btn btn-info btn-dark border border-primary" 
-        href="../Vue/contact.php"
-        >Return sur la formulaire</a>';
-    } else
+    } else{
+            $nom = $_POST["nom"];
+            echo 'nom=';
+            echo  $nom;
+            echo "<br><br>";
+
+    }
+
     // On verifie si le champ est bien renseigné;
     if (empty($_POST["prenom"])) 
     {
@@ -22,11 +25,13 @@ if(isset($_POST["submit"])){
         echo "Le prénom doit être renseigné!";
         echo "<br><br>";
         echo '</span>';
-        echo '<a 
-        class="btn btn-info btn-dark border border-primary" 
-        href="../Vue/contact.php"
-        >Return sur la formulaire</a>';
-    }  else
+    }  else{
+        $prenom = $_POST["prenom"];
+        echo 'prenom=';
+        echo  $prenom;
+        echo "<br><br>";
+
+    }
     // On verifie si le champ est bien renseigné;
     if (empty($_POST["gender"])) 
     {
@@ -34,11 +39,13 @@ if(isset($_POST["submit"])){
         echo "Le sexe doit être renseigné!";
         echo "<br><br>";
         echo '</span>';
-        echo '<a 
-        class="btn btn-info btn-dark border border-primary" 
-        href="../Vue/contact.php"
-        >Return sur la formulaire</a>';
-    }  else
+    }  else{
+        $gender = $_POST["gender"];
+        echo 'gender=';
+        echo  $gender;
+        echo "<br><br>";
+
+    }
     // On verifie si le champ est bien renseigné;
     if (empty($_POST["ddn"])) 
     {
@@ -46,11 +53,13 @@ if(isset($_POST["submit"])){
         echo "La date de naissance doit être renseigné!";
         echo "<br><br>";
         echo '</span>';
-        echo '<a 
-        class="btn btn-info btn-dark border border-primary" 
-        href="../Vue/contact.php"
-        >Return sur la formulaire</a>';
-    }  else
+    }  else{
+
+        $ddn = $_POST["ddn"];
+        echo 'ddn=';
+        echo  $ddn;
+        echo "<br><br>";
+    }
     // On verifie si le champ est bien renseigné;
     if (empty($_POST["adresse"])) 
     {
@@ -58,11 +67,11 @@ if(isset($_POST["submit"])){
         echo "L'adresse doit être renseigné!";
         echo "<br><br>";
         echo '</span>';
-        echo '<a 
-        class="btn btn-info btn-dark border border-primary" 
-        href="../Vue/contact.php"
-        >Return sur la formulaire</a>';
-    }  else
+    }  else{
+        $adresse = $_POST["adresse"];
+        echo 'adresse=';
+        echo  $adresse;
+        echo "<br><br>";}
     // On verifie si le champ est bien renseigné;
     if (empty($_POST["ville"])) 
     {
@@ -70,11 +79,11 @@ if(isset($_POST["submit"])){
         echo "La ville doit être renseigné!";
         echo "<br><br>";
         echo '</span>';
-        echo '<a 
-        class="btn btn-info btn-dark border border-primary" 
-        href="../Vue/contact.php"
-        >Return sur la formulaire</a>';
-    }  else
+    }  else{
+        $ville = $_POST["ville"];
+        echo 'ville=';
+        echo  $ville;
+        echo "<br><br>";}
     // On verifie si le champ est bien renseigné;
     if (empty($_POST["codeP"])) 
     {
@@ -82,11 +91,12 @@ if(isset($_POST["submit"])){
         echo "Le code Postal doit être renseigné!";
         echo "<br><br>";
         echo '</span>';
-        echo '<a 
-        class="btn btn-info btn-dark border border-primary" 
-        href="../Vue/contact.php"
-        >Return sur la formulaire</a>';
-    }  else
+    }  else{
+        $codeP = $_POST["codeP"];
+        echo 'codeP=';
+        echo  $codeP;
+        echo "<br><br>";
+    }
     // On verifie si le champ est bien renseigné;
     if (empty($_POST["email"])) 
     {
@@ -94,11 +104,12 @@ if(isset($_POST["submit"])){
         echo "L'adresse mail doit être renseigné!";
         echo "<br><br>";
         echo '</span>';
-        echo '<a 
-        class="btn btn-info btn-dark border border-primary" 
-        href="../Vue/contact.php"
-        >Return sur la formulaire</a>';
-    }  else
+    }  else{
+        $email = $_POST["email"];
+        echo 'email=';
+        echo  $email;
+        echo "<br><br>";
+    }
     // On verifie si le champ est bien renseigné;
     if (empty($_POST["sujet"])) 
     {
@@ -106,11 +117,12 @@ if(isset($_POST["submit"])){
         echo "Le sujet doit être renseigné!";
         echo "<br><br>";
         echo '</span>';
-        echo '<a 
-        class="btn btn-info btn-dark border border-primary" 
-        href="../Vue/contact.php"
-        >Return sur la formulaire</a>';
-    }  else
+    }  else{
+        $sujet = $_POST["sujet"];
+        echo 'sujet=';
+        echo  $sujet;
+        echo "<br><br>";
+    }
     // On verifie si le champ est bien renseigné;
     if (empty($_POST["question"])) 
     {
@@ -118,11 +130,12 @@ if(isset($_POST["submit"])){
         echo "La question doit être renseigné!";
         echo "<br><br>";
         echo '</span>';
-        echo '<a 
-        class="btn btn-info btn-dark border border-primary" 
-        href="../Vue/contact.php"
-        >Return sur la formulaire</a>';
-    }  else
+    }  else{
+        $question = $_POST["question"];
+        echo 'question=';
+        echo  $question;
+        echo "<br><br>";
+    }
     // On verifie si le champ est bien renseigné;
     if (empty($_POST["jaccept"])) 
     {
@@ -130,73 +143,16 @@ if(isset($_POST["submit"])){
         echo "Le champ (J'accepte le traitement informatique de ce formulaire) doit être renseigné!";
         echo "<br><br>";
         echo '</span>';
-        echo '<a 
-        class="btn btn-info btn-dark border border-primary" 
-        href="../Vue/contact.php"
-        >Return sur la formulaire</a>';
-    }  
-     // si tous les champ sont bien renseigné;
-    else{
-        $nom = $_POST["nom"];
-        echo 'nom=';
-        echo  $nom;
-        echo "<br><br>";
-
-        $prenom = $_POST["prenom"];
-        echo 'prenom=';
-        echo  $prenom;
-        echo "<br><br>";
-
-        $ddn = $_POST["ddn"];
-        echo 'ddn=';
-        echo  $ddn;
-        echo "<br><br>";
-
-        $gender = $_POST["gender"];
-        echo 'gender=';
-        echo  $gender;
-        echo "<br><br>";
-
-        $adresse = $_POST["adresse"];
-        echo 'adresse=';
-        echo  $adresse;
-        echo "<br><br>";
-
-        $ville = $_POST["ville"];
-        echo 'ville=';
-        echo  $ville;
-        echo "<br><br>";
-
-        $codeP = $_POST["codeP"];
-        echo 'codeP=';
-        echo  $codeP;
-        echo "<br><br>";
-
-        $email = $_POST["email"];
-        echo 'email=';
-        echo  $email;
-        echo "<br><br>";
-
-        $sujet = $_POST["sujet"];
-        echo 'sujet=';
-        echo  $sujet;
-        echo "<br><br>";
-
-        $question = $_POST["question"];
-        echo 'question=';
-        echo  $question;
-        echo "<br><br>";
-
+    } else{
         $jaccept = $_POST["jaccept"];
         echo 'jaccept=';
         echo  $jaccept;
         echo "<br><br>";
     }
-   
-}else{
-    echo '<span style="color:red">';
-    echo "Error";
-    echo '</span>';
+    echo '<a 
+    class="btn btn-secondary " 
+    href="../Vue/contact.php"
+    >Return sur la formulaire</a>';
 }
 include('../Vue/footer.php');
 ?>
