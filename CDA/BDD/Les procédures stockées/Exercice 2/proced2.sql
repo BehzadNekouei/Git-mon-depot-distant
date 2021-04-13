@@ -1,5 +1,5 @@
 DELIMITER |
-CREATE PROCEDURE CA_Fournisseur(IN obs varchar(50))
+CREATE PROCEDURE Lst_Commandes(IN obs varchar(50))
 BEGIN
     /*Sortir les produits des commandes ayant le mot "urgent' en observation?
     (Afficher le numéro de commande, le nom du fournisseur,
