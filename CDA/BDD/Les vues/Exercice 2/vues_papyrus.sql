@@ -4,7 +4,7 @@
    QteTot et le prix total, PrixTot. */
 CREATE VIEW v_GlobalCde
 AS
-SELECT codart,SUM(qtecde*priuni) AS 'la somme des quantités commandées'
+SELECT codart,SUM(qtecde) AS 'QteTot', SUM(qtecde*priuni) AS 'PrixTot'
 FROM ligcom
 GROUP BY codart ;
 
