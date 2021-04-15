@@ -42,11 +42,11 @@ DELIMITER |
 CREATE OR REPLACE TRIGGER insert_chambre AFTER INSERT ON chambre
     FOR EACH ROW
     BEGIN
-    DECLARE nbChaHot INT;
+    DECLARE cap_hot INT;
     DECLARE id_hot INT;
     SET id_hot = NEW.cha_hot_id;
-    SET nbChaHot = (SELECT count(*) FROM chambre WHERE cha_hot_id=id_hot);
-    IF nbResCli>50 THEN
+    SET cap_hot = (SELECT SUM(cha_capacite) FROM chambre GROUP BY cha_hot_id HAVING cha_hot_id=id_hot);
+    IF cap_hot>50 THEN
         SIGNAL SQLSTATE '40000' SET MESSAGE_TEXT = 'Un problème est survenu. Règle de gestion réservations !';
     END IF;
 END |
