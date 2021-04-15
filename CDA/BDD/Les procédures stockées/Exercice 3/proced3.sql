@@ -1,15 +1,14 @@
 DELIMITER |
-CREATE PROCEDURE CA_ Fournisseur(IN obs varchar(50))
+CREATE PROCEDURE CA_Fournisseur(IN codeF INT, IN an YEAR)
 BEGIN
-    /**/
-    SELECT entcom.numcom AS 'le numéro de commande',
-    nomfou AS 'le nom du fournisseur', 
-    libart AS 'le libellé du produit' , 
-    (qtecde*priuni) AS 'le sous total'
-    FROM entcom,fournis,ligcom,produit
-    WHERE entcom.numfou=fournis.numfou
-    AND entcom.numcom=ligcom.numcom
-    AND produit.codart=ligcom.codart
-    AND obscom LIKE '%obs%';
+	IF codeF= ANY (SELECT numfou FROM fournis) then
+    SELECT fournis.numfou , SUM((qtecde*priuni)*1.2) AS CA
+	FROM entcom, ligcom, fournis
+	WHERE entcom.numfou=fournis.numfou
+	AND ligcom.numcom=entcom.numcom
+	AND YEAR(entcom.datcom)=an
+	GROUP BY fournis.numfou
+    HAVING fournis.numfou=codeF;
+	END IF;
 END |
-DELIMITER;
+DELIMITER ;

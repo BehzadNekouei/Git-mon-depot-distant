@@ -12,6 +12,6 @@ BEGIN
     WHERE entcom.numfou=fournis.numfou
     AND entcom.numcom=ligcom.numcom
     AND produit.codart=ligcom.codart
-    AND obscom LIKE '%obs%';
+    AND obscom LIKE CONCAT ('%',obs,'%');
 END |
-DELIMITER;
+DELIMITER ;
