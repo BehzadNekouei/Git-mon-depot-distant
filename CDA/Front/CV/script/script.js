@@ -11,7 +11,7 @@ $(document).ready(function () {
     const mail = $("#mail").val();
     const sujet = $("#sujet").val();
     const message = $("#message").val();
-    var bool = true;
+    let bool = true;
     const vide = "Veuillez renseigner ce champ.";
     const invalid = "entrée invalide";
     const i = '<i class="fas fa-exclamation-triangle"></i>';
