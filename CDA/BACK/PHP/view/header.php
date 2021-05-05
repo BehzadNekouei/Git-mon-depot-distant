@@ -10,7 +10,7 @@
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="<?php $_SERVER['DOCUMENT_ROOT']?>">Accueil</a>
+    <a class="navbar-brand" href="<?php $_SERVER['DOCUMENT_ROOT']?>">Accueil PHP</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -39,8 +39,17 @@
           Les tableaux
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="<?php $_SERVER['DOCUMENT_ROOT']?>/view/exercice-1.php">exercice 1</a></li>
-            <li><a class="dropdown-item" href="<?php $_SERVER['DOCUMENT_ROOT']?>/view/exercice-2.php">exercice 2</a></li>
+            <li><a class="dropdown-item" href="<?php $_SERVER['DOCUMENT_ROOT']?>/view/exercice-4.php">exercice 1</a></li>
+            <li><a class="dropdown-item" href="<?php $_SERVER['DOCUMENT_ROOT']?>/view/exercice-5.php">exercice 2</a></li>
+            <li><a class="dropdown-item" href="<?php $_SERVER['DOCUMENT_ROOT']?>/view/exercice-6.php">exercice 3</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Les fonctions
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="<?php $_SERVER['DOCUMENT_ROOT']?>/view/exercice-7.php">exercices</a></li>
           </ul>
         </li>
       </ul>
