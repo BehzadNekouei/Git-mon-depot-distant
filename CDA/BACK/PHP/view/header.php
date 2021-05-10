@@ -52,6 +52,14 @@
             <li><a class="dropdown-item" href="<?php $_SERVER['DOCUMENT_ROOT']?>/view/exercice-7.php">exercices</a></li>
           </ul>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Les dates
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="<?php $_SERVER['DOCUMENT_ROOT']?>/view/exercice-8.php">exercices</a></li>
+          </ul>
+        </li>
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

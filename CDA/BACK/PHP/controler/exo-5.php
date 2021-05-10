@@ -62,9 +62,13 @@ $capitales = array(
 // function to find and remove all keys which start with B
 function removeCapital($capitales){
     global $capitales;
+    $counter=0;
     foreach($capitales as $capitale => $pays){
-        if(preg_match('/^B/',$capitale)){
-             unset($capitales[$capitale]);
+        $result = substr($capitale, 0, 1);
+        if($result!=='B'){
+           array_splice($capitales,$counter,1);
+           $counter-=1;
         }
+    $counter++;
     }
 };

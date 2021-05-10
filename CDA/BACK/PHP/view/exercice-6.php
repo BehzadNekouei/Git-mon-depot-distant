@@ -9,7 +9,6 @@ include ('../controler/exo-6.php');
     <p>1. Affichez la liste des régions (par ordre alphabétique) suivie du nom des départements</p>
     <ul class="list-group">
         <?php
-            asort($departements);
             foreach ($departements as $region => $departement){
         ?>
             <li class="list-group-item">
@@ -20,7 +19,7 @@ include ('../controler/exo-6.php');
                 : 
                 </strong>
                 <?php
-                    for($i=0; $i<=sizeof($departement)-1; $i++){
+                    for($i=0; $i<sizeof($departement); $i++){
                 ?>
                 <span class="mx-3">
                 <?php

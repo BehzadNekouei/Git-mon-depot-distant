@@ -23,10 +23,11 @@ include ('header.php');
                 for($b=1; $b<=12; $b++){
             ?>
             <tr>
+                <th><?php echo $b; ?></th>
                 <?php
-                    for($c=0; $c<=12; $c++){
+                    for($c=1; $c<=12; $c++){
                 ?>
-                <th><?php echo $b*$c; ?></th>
+                <td><?php echo $b*$c; ?></td>
                 <?php
                 }
                 ?>
