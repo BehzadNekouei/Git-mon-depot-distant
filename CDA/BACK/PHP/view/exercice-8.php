@@ -11,7 +11,9 @@ include ('../controler/functions.php');
     <p>Le numéro de semaine est :
     <strong>
         <?php
-            echo date("W");
+            $date1 = new DateTime("14-07-2019");
+            $semaine =  $date1->format('W');
+            echo $semaine;
         ?>
     </strong>
     </p>
@@ -20,9 +22,9 @@ include ('../controler/functions.php');
     <p>Il reste 
     <strong>
     <?php
-        $begin = new DateTime("10-12-2021");
-        $end = new DateTime(date("d/m/Y"));
-        $days = $end->diff($begin);
+        $end = new DateTime("10-12-2021");
+        $begin = new DateTime();
+        $days = $begin->diff($end);
         echo $days->format('%R%a');
     ?>
     </strong>

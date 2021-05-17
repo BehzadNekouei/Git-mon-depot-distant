@@ -1,10 +1,10 @@
 <?php
-//fonction qui permette de générer un lien.
+// une fonction qui permette de générer un lien.
 function lien($link,$title){
     $a ='<a href="'.$link.'">'.$title.'</a>';
     return $a;
 }
-// fonction qui calcul la somme des valeurs d'un tableau
+// une fonction qui calcul la somme des valeurs d'un tableau
 function somme($tab){
     $resultat = 0;
     for($i=0 ; $i<sizeof($tab) ; $i++){
@@ -41,8 +41,7 @@ function complex_password($password){
         return false;
     }
 }
-// 
-// fonction pour savoir si une année est bissextile ou non
+// une fonction pour savoir si une année est bissextile ou non
 function bissextile($year){
     $days = cal_days_in_month(CAL_GREGORIAN,2,$year);
     if($days == 29){
@@ -52,7 +51,7 @@ function bissextile($year){
         return false;
     }
 }
-// fonction pour valider une date
+// une fonction pour valider une date
 function validateDate($date) {
     $oDate = DateTime::createFromFormat($date , "d/m/Y");
     $errors = DateTime::getLastErrors();
@@ -63,9 +62,8 @@ function validateDate($date) {
         return true;
     }
 }
-// fonction qui return 1 mois à la date courante.
+// une fonction qui return 1 mois à la date courante.
 function nextMonth(){
     $nextmonth = date("d/m/Y", strtotime('+1 month'));
     return $nextmonth;
 }
-

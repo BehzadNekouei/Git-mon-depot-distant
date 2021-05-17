@@ -1,6 +1,6 @@
 <?php
 
-    $host='localhost';
+    $host='127.0.0.1:80';
     $database_name='jarditou';
     $database_username='root';
     $database_password='';
@@ -18,7 +18,7 @@ try {
 
  //Si échec de la connexion (du try), on attrape l'exception avec catch
 } catch(PDOException $exept) {
-    // echo "<p class='text-danger'>Connexion to the database was unsuccessful !</p>";
+    echo "<p class='text-danger'>Connexion to the database was unsuccessful !</p>";
     // On affiche le message d'erreur
     throw new PDOException($exept->getMessage());
 }
