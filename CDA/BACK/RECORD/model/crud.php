@@ -10,7 +10,8 @@
             try {
                 $sql = "SELECT `disc_id`, `disc_title`,`disc_year`,`disc_picture`,`disc_label`, `disc_genre`, `artist_name` 
                 FROM `disc`,`artist` 
-                WHERE `disc`.`artist_id` = `artist`.`artist_id`";
+                WHERE `disc`.`artist_id` = `artist`.`artist_id`
+                ORDER BY `disc_id`";
                 $result=$this->db->query($sql);
                 return $result;
             } catch (PDOException $th) {
@@ -31,7 +32,6 @@
                 $result->execute();
                 $details=$result->fetch();
                 return $details;
-
             } catch (PDOException $e) {
                 // echo $e->getMessage();
                 return false;
@@ -41,7 +41,7 @@
         function addDisc($disc_title, $disc_year, $disc_picture, $disc_label, $disc_genre, $disc_price, $artist_id){
             try {
                 $sql = "INSERT INTO `disc` (`disc_title`, `disc_year`, `disc_picture`, `disc_label`, `disc_genre`, `disc_price`, `artist_id`) 
-                VALUES (:disc_title, :disc_year, :disc_picture, :disc_label, :disc_genre, :disc_price, :artist_id)";
+                        VALUES (:disc_title, :disc_year, :disc_picture, :disc_label, :disc_genre, :disc_price, :artist_id)";
                 $result = $this->db->prepare($sql);
                 $result->bindparam(':disc_title', $disc_title);
                 $result->bindparam(':disc_year', $disc_year);
@@ -51,6 +51,7 @@
                 $result->bindparam(':disc_price', $disc_price);
                 $result->bindparam(':artist_id', $artist_id);
                 $result->execute();
+                return true;
             } catch (PDOException $e) {
                 // echo $e->getMessage();
                 return false;
@@ -68,8 +69,35 @@
                 return false;
             }
         }
-    }
-    
+         //function to update the disc
+        function updateDisc($disc_id, $disc_title, $disc_year, $disc_picture, $disc_label, $disc_genre, $disc_price, $artist_id){
+            try {
+                $sql = "UPDATE `disc` 
+                        SET `disc_title` = :disc_title,
+                        `disc_year` = :disc_year ,
+                        `disc_picture` = :disc_picture,
+                        `disc_label` = :disc_label,
+                        `disc_genre` = :disc_genre,
+                        `disc_price` = :disc_price,
+                        `artist_id` = :artist_id
+                        WHERE `disc_id` = :disc_id";
+                $result = $this->db->prepare($sql);
+                $result->bindparam(':disc_id', $disc_id);
+                $result->bindparam(':disc_title', $disc_title);
+                $result->bindparam(':disc_year', $disc_year);
+                $result->bindparam(':disc_picture', $disc_picture);
+                $result->bindparam(':disc_label', $disc_label);
+                $result->bindparam(':disc_genre', $disc_genre);
+                $result->bindparam(':disc_price', $disc_price);
+                $result->bindparam(':artist_id', $artist_id);
+                $result->execute();
+                return true;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+        }
+    } 
     
 
    

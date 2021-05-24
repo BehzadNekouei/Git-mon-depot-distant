@@ -8,7 +8,7 @@
         ?>
         <div class="container">
         <h1 class="my-3">Details</h1>
-        <form action="#">
+        <form action="#" method="get">
             <div class="row">
                 <div class="col-sm-12 col-lg-4">
                     <img src="../assets/img/<?=isset($details['disc_picture']) ? $details['disc_picture'] : '' ?>" class="img-thumbnail" alt="<?=isset($details['disc_picture']) ? $details['disc_picture'] : '' ?>">
@@ -31,8 +31,8 @@
                 </div>
             </div>
             <div class="my-5">
-                <a href="views/update_form.php?disc_id=<?= $discId ?>" class="btn btn-primary">Modifier</a>
-                <a href="views/delete_form.php?disc_id=<?= $discId ?>" class="btn btn-primary">Supprimer</a>
+                <a href="update_form.php?disc_id=<?= $discId ?>" class="btn btn-primary">Modifier</a>
+                <a href="delete_form.php?disc_id=<?= $discId ?>" class="btn btn-primary">Supprimer</a>
                 <a href="../" class="btn btn-primary">Retour</a>
             </div>
         </form>
