@@ -32,8 +32,8 @@
             </div>
             <div class="my-5">
                 <a href="update_form.php?disc_id=<?= $discId ?>" class="btn btn-primary">Modifier</a>
-                <a href="delete_form.php?disc_id=<?= $discId ?>" class="btn btn-primary">Supprimer</a>
-                <a href="../" class="btn btn-primary">Retour</a>
+                <a href="delete_form.php?disc_id=<?= $discId ?>" class="btn btn-danger">Supprimer</a>
+                <a href="../" class="btn btn-secondary">Retour</a>
             </div>
         </form>
     </div>

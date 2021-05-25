@@ -66,7 +66,7 @@ include '../controlers/add_script.php';
                         <span class="error"><?= isset($fileError['disc_picture']) ? $fileError['disc_picture'] : '' ?></span>
                         <div class="my-5">
                         <input type="submit" class="btn btn-primary" value="Ajouter" name="submit">
-                        <a href="../" class="btn btn-primary">Retour</a>
+                        <a href="../" class="btn btn-secondary">Retour</a>
                         </div>
                     </div>
                 </form>

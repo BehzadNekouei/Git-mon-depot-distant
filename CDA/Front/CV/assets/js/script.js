@@ -46,12 +46,12 @@ $(document).ready(function() {
     return false;
     }
   }
-  // chech inputs on blur
+  // check inputs on blur
   name.blur(() => validForm(name, validName, nameError));
   mail.blur(() => validForm(mail, validMail, mailError));
   sujet.blur(() => validForm(sujet, validSujet, sujetError));
   message.blur(() => validForm(message, validMessage, messageError));
-  // dcheck inputs on submit
+  // check inputs on submit
   $('#submit').click(function(){
     nameCheck = validForm(name, validName, nameError);
     mailCheck = validForm(mail, validMail, mailError);

@@ -79,7 +79,7 @@ include '../controlers/update_script.php';
                     </div>
                     <div class="my-5">
                     <input type="submit" class="btn btn-primary" value="Modifier" name="submit">
-                    <a href="../" class="btn btn-primary">Retour</a>
+                    <a href="../" class="btn btn-secondary">Retour</a>
                 </div>
             </form>
             <?php
