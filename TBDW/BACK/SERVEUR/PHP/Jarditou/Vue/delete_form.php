@@ -23,7 +23,7 @@
     <h1 class="text-center"><?php echo $result['pro_ref']; ?></h1>
     <br><br>
     <h2 class="text-center">Êtes vous sûr de vouloir supprimer <br>
-    "<strong><?php echo $result['pro_ref']; ?></strong>" dela base de données ?</h2> 
+    "<strong><?php echo $result['pro_ref']; ?></strong>" de la base de données ?</h2> 
     <br><br>
     <div class="d-flex justify-content-center">
     <a href="details.php?pro_id=<?php echo $result['pro_id']; ?>"><button type="button" class="btn btn-success mr-3">Annuler</button></a>

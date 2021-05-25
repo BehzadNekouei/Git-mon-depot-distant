@@ -97,7 +97,20 @@
                 return false;
             }
         }
-    } 
-    
+        //function to delete the disc from database
+        function deleteDisc($discId){
+            try {
+                $sql = "DELETE FROM `disc`
+                WHERE `disc_id`=:disc_id";
+                $result=$this->db->prepare($sql);
+                $result->bindparam(':disc_id', $discId);
+                $result->execute();
+                return true;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+        }
+    }
 
    

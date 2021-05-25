@@ -4,6 +4,7 @@ include '../views/header.php';
 include '../controlers/update_script.php';
 ?>
 <div class="container">
+    <div class="row mx-2">
     <?php 
         if(isset($_GET['disc_id'])){
             $discId = $_GET['disc_id'];
@@ -36,12 +37,12 @@ include '../controlers/update_script.php';
                 }
                 // call updateDisc method
                 if($crud->updateDisc($disc_id, $disc_title, $disc_year, $disc_picture, $disc_label, $disc_genre, $disc_price, $artist_id)){
-                    // redirect to page details
+                    // redirect to home page
                     header("Location:../");
                 }
             } else {
             ?>
-            <h1 class="my-3">Modification</h1>
+            <h1 class="my-3">Modifier un vinyle</h1>
             <form action="#" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <label for="title" class="form-label mt-3">Title</label>
@@ -88,11 +89,12 @@ include '../controlers/update_script.php';
         } else {
             ?>
             <div class="container">
-                <h1 class="text-danger my-5" >There is an error! Please check the details and try again!</h1>
+                <h1 class="text-danger my-5" >La page que vous cherchiez n'est pas trouvée!</h1>
             </div>
         <?php
         }
     ?>
+    </div>
 </div>
 <?php
     include '../views/footer.php';

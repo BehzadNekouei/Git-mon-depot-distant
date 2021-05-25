@@ -6,7 +6,7 @@ $artists = $crud->getArtistList();
 include '../controlers/add_script.php';
 ?>
 <div class="container">
-    <div class="row">
+    <div class="row mx-2">
         <?php 
             if(isset($formError) && isset($fileError) && sizeof($formError) === 0 && sizeof($fileError) === 0 && isset($_POST['submit'])){
                 // if there is no error
@@ -25,7 +25,8 @@ include '../controlers/add_script.php';
                 $new_name = $target_dir.$disc_picture;
                 move_uploaded_file( $_FILES['disc_picture']['tmp_name'] , $new_name);
                 // call addDisc method to add new disc to database
-                if($crud->addDisc($disc_title, $disc_year, $disc_picture, $disc_label, $disc_genre, $disc_price, $artist_id)){
+                $insert = $crud->addDisc($disc_title, $disc_year, $disc_picture, $disc_label, $disc_genre, $disc_price, $artist_id);
+                if($insert){
                     // redirect to home page
                     header("Location:../");
                 }
