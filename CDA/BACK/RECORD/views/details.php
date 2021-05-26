@@ -17,7 +17,7 @@
                     <label for="title" class="form-label">Title</label>
                     <input type="text" name="title" id="title" class="form-control" value="<?= isset($details['disc_title']) ? $details['disc_title'] : '' ?>" disabled>
                     <label for="year" class="form-label">Year</label>
-                    <input type="text" name="year" label="year" class="form-control" value="<?= isset($details['disc_year']) ? $details['disc_year'] : '' ?>"  disabled>
+                    <input type="text" name="year" id="year" class="form-control" value="<?= isset($details['disc_year']) ? $details['disc_year'] : '' ?>"  disabled>
                     <label for="label" class="form-label">Label</label>
                     <input type="text" name="label" id="label" class="form-control" value="<?= isset($details['disc_label']) ? $details['disc_label'] : '' ?>"  disabled>
                 </div>

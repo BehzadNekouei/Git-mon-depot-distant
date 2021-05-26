@@ -60,7 +60,7 @@ include '../controlers/update_script.php';
                     </select>
                     <span class="error"><?= isset($formError['artist_id']) ? $formError['artist_id'] : '' ?></span>
                     <label for="year" class="form-label mt-3">Year</label>
-                    <input type="text" name="disc_year" label="year" class="form-control" value="<?= isset($details['disc_year']) ? $details['disc_year'] : '' ?>">
+                    <input type="text" name="disc_year" id="year" class="form-control" value="<?= isset($details['disc_year']) ? $details['disc_year'] : '' ?>">
                     <span class="error"><?= isset($formError['disc_year']) ? $formError['disc_year'] : '' ?></span>
                     <label for="label" class="form-label mt-3">Label</label>
                     <input type="text" name="disc_label" id="label" class="form-control" value="<?= isset($details['disc_label']) ? $details['disc_label'] : '' ?>">
