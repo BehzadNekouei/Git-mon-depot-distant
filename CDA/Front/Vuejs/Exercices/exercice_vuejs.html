@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercices Vues.js</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Exercices</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Additionneur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nombre Magique
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Calculatrice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Interface</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <h1>Exercices Vues.js</h1>
+    <div class="row" id="app-1">
+        <div class="col p-5">
+            <h2>Additionneur</h2>
+            <p>Réalisez une application possédant deux input. Les deux premiers doivent servir à saisir des valeurs
+                numériques, le résultat de l'addition doit s'afficher dans un label.</p>
+            <input type="number" v-model.number="num1">
+            +
+            <input type="number" v-model.number="num2">
+            =
+            {{ num1 + num2 }}
+        </div>
+    </div>
+    <div class="row" id="app-2">
+        <div class="col p-5">
+            <h2>Nombre Magique</h2>
+            <p>Reprenez l'exercice du nombre magique</p>
+            <p>Nombre magique - Devinez une valeur entre 0 et 100</p>
+            <input type="number" v-model="num">
+            <button class="btn btn-primary" v-on:click="check(num)">Vérifier</button>
+            {{ message }}
+        </div>
+    </div>
+    <div class="row" id="app-3">
+        <div class="col p-5">
+            <h2>Calculatrice</h2>
+            <p>Réalisez une calculatrice</p>
+            <div>
+                <div><input type="number" v-bind:value="result" disabled></div>
+                <div><button class="btn btn-primary p-4 m-1">1</button><button class="btn btn-primary p-4 m-1">2</button><button class="btn btn-primary p-4 m-1">3</button></div>
+                <div><button class="btn btn-primary p-4 m-1">4</button><button class="btn btn-primary p-4 m-1">5</button><button class="btn btn-primary p-4 m-1">6</button></div>
+                <div><button class="btn btn-primary p-4 m-1">7</button><button class="btn btn-primary p-4 m-1">8</button><button class="btn btn-primary p-4 m-1">9</button></div>
+                <div><button class="btn btn-primary p-4 m-1">+</button><button class="btn btn-primary p-4 m-1">-</button><button class="btn btn-primary p-4 m-1">=</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
