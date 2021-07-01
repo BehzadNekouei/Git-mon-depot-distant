@@ -12,10 +12,11 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Exercices</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <input type="" number value="" class="navbar-toggler" type="input type=" number value=""
+                   data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </input type="number value=">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -60,16 +61,42 @@
             {{ message }}
         </div>
     </div>
-    <div class="row" id="app-3">
-        <div class="col p-5">
-            <h2>Calculatrice</h2>
-            <p>Réalisez une calculatrice</p>
-            <div>
-                <div><input type="number" v-bind:value="result" disabled></div>
-                <div><button class="btn btn-primary p-4 m-1">1</button><button class="btn btn-primary p-4 m-1">2</button><button class="btn btn-primary p-4 m-1">3</button></div>
-                <div><button class="btn btn-primary p-4 m-1">4</button><button class="btn btn-primary p-4 m-1">5</button><button class="btn btn-primary p-4 m-1">6</button></div>
-                <div><button class="btn btn-primary p-4 m-1">7</button><button class="btn btn-primary p-4 m-1">8</button><button class="btn btn-primary p-4 m-1">9</button></div>
-                <div><button class="btn btn-primary p-4 m-1">+</button><button class="btn btn-primary p-4 m-1">-</button><button class="btn btn-primary p-4 m-1">=</button></div>
+    <div class="row m-3" id="app-3">
+
+        <h2>Calculatrice</h2>
+        <p>Réalisez une calculatrice</p>
+        <div class="col-sm-8 col-lg-6 d-flex justify-content-center">
+            <div class="border border-4 rounded-3">
+                <div class="border border-secondary bg-light m-3 p-2">
+                    {{  display }}
+                </div>
+                <div>
+                    <button class="btn btn-light p-4 m-1" v-on:click="number(1)">1</button>
+                    <button class="btn btn-light p-4 m-1" v-on:click="number(2)">2</button>
+                    <button class="btn btn-light p-4 m-1" v-on:click="number(3)">3</button>
+                    <button class="btn btn-info p-4 m-1" v-on:click="setOperator('+')">+</button>
+                </div>
+                <div>
+                    <button class="btn btn-light p-4 m-1" v-on:click="number(4)">4</button>
+                    <button class="btn btn-light p-4 m-1" v-on:click="number(5)">5</button>
+                    <button class="btn btn-light p-4 m-1" v-on:click="number(6)">6</button>
+                    <button class="btn btn-info p-4 m-1" v-on:click="setOperator('-')">-</button>
+                </div>
+                <div>
+                    <button class="btn btn-light p-4 m-1" v-on:click="number(7)">7</button>
+                    <button class="btn btn-light p-4 m-1" v-on:click="number(8)">8</button>
+                    <button class="btn btn-light p-4 m-1" v-on:click="number(9)">9</button>
+                    <button class="btn btn-info p-4 m-1" v-on:click="setOperator('*')">x</button>
+                </div>
+                <div>
+                    <button class="btn btn-light p-4 m-1" v-on:click="number(0)">0</button>
+                    <button class="btn btn-light p-4 m-1" v-on:click="number('.')">.</button>
+                    <button class="btn btn-light p-4 m-1" v-on:click="reset()">C</button>
+                    <button class="btn btn-info p-4 m-1" v-on:click="setOperator('/')">÷</button>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-info p-4 m-2" v-on:click="calculate()">=</button>
+                </div>
             </div>
         </div>
     </div>
