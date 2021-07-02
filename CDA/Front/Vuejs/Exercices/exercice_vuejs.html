@@ -62,7 +62,6 @@
         </div>
     </div>
     <div class="row m-3" id="app-3">
-
         <h2>Calculatrice</h2>
         <p>Réalisez une calculatrice</p>
         <div class="col-sm-8 col-lg-6 d-flex justify-content-center">
@@ -98,6 +97,21 @@
                     <button class="btn btn-info p-4 m-2" v-on:click="calculate()">=</button>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row m-3" id="app-4">
+        <h2>Interface</h2>
+        <p>L'application est composée de deux panneaux.</p>
+        <p>Au démarrage de l'application, le premier panneau est visible, il contient un bouton.</p>
+        <p>Lorsque vous cliquez sur le bouton, le premier panneau disparaît et la deuxième panneau apparaît.</p>
+        <p>Le deuxième panneau contient lui même un bouton, pour refaire l'opération inverse.</p>
+        <div class="col bg-primary p-5" v-if="seen">
+            <p>Panneau 1</p>
+            <button class="btn btn-secondary" v-on:click="show()">Click me!</button>
+        </div>
+        <div class="col bg-warning p-5" v-else>
+            <p>Panneau 2</p>
+            <button class="btn btn-secondary" v-on:click="show()">Click me!</button>
         </div>
     </div>
 </div>
